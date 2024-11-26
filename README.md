@@ -32,10 +32,8 @@ export const ProductModel = model<Product>('product', ProductSchema);
 * Write a function to find all products with an amount less than 10, with pagination.
   
 Save the connection string as an environment variable. Pass the environment file with this command:
-```json
-  "scripts": {
-    "start": "tsx watch --env-file=.env ./code.ts"
-  }
+```
+npx tsx watch --env-file=.env ./code.ts
 ```
    
 #### Coding Question 02
@@ -63,8 +61,8 @@ export type Comment = Partial<CommentWithTimestamps>;
 
 export const PostModel = model<Post>('post', PostSchema);
 ```
-* Write a function to add a new post *(do not pass comments)*.
-* Write a function to add a new comment. Call the function and add comments by multiple users.
+* Write a function to add a new post *(with empty comments[] array)*.
+* Write a function to add a new comment to a specific post id. 
 * Write a function to return all comments for a specific post id, with pagination.
 * Write a function to update a comment text, identified by post id, and comment id.
-* Write a function to delete a comment by comment id, for a specific post.
+* Write a function to delete a comment by comment id, for a specific post id.
